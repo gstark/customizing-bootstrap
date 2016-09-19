@@ -41,6 +41,9 @@ group :development do
   gem 'listen', '~> 3.0.5'
 
   gem 'guard-livereload', require: false
+  gem "guard", ">= 2.2.2", require: false
+  gem "rack-livereload"
+  gem "rb-fsevent", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
