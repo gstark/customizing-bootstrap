@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stores
   root 'pages#home'
 
   get 'pages/home'

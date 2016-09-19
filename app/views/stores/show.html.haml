@@ -1,0 +1,20 @@
+.page-header
+  = link_to stores_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_store_path(@store), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show store
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @store.name
+  %dt Lat:
+  %dd= @store.lat
+  %dt Lng:
+  %dd= @store.lng
+  %dt Owner:
+  %dd= @store.owner
+  %dt Rating:
+  %dd= @store.rating

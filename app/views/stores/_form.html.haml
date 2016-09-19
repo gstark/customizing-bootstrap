@@ -1,0 +1,35 @@
+= form_for @store, html: { class: "form-horizontal", role: "form" } do |f|
+  -if @store.errors.any?
+    .alert.alert-danger.alert-dismissable{role: "alert"}
+      %button.close{type: "button", data: {dismiss: "alert"} }
+        %span{aria: {hidden: "true"} } &times;
+        %span.sr-only Close
+      %h4= "#{pluralize(@store.errors.count, "error")} prohibited this store from being saved:"
+
+      %ul
+        - @store.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :lat, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :lat, class: 'form-control'
+  .form-group
+    = f.label :lng, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :lng, class: 'form-control'
+  .form-group
+    = f.label :owner, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :owner, class: 'form-control'
+  .form-group
+    = f.label :rating, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.number_field :rating, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit class: 'btn btn-primary'
