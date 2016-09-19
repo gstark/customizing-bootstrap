@@ -1,12 +1,16 @@
 @import "variables";
 @import "mixins";
+@import "fonts";
 
 body {
     width: 100%;
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
+    @media(max-width:768px) {
+      padding-top: 50px;
+    }
 }
 
 html {
@@ -123,25 +127,24 @@ a {
 }
 
 .intro {
+    position: relative;
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     color: white;
-    background: image-url("intro-bg.jpg") no-repeat bottom center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     .intro-body {
         display: table-cell;
         vertical-align: middle;
+        text-shadow: 4px 4px 2px #444;
         .brand-heading {
-            font-size: 40px;
+            font-family: "Knewave";
+            letter-spacing: 0.5em;
+            font-size: 50px;
         }
         .intro-text {
+            letter-spacing: 0.1em;
             font-size: 18px;
         }
     }
@@ -156,6 +159,22 @@ a {
                 font-size: 26px;
             }
         }
+    }
+      &::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: black;
+      background: image-url("landing-fish.jpg") no-repeat bottom center scroll;
+      -webkit-filter: blur(3px) sepia(10%) grayscale(50%);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
     }
 }
 
@@ -237,15 +256,42 @@ a {
 }
 
 .download-section {
+    position: relative;
     width: 100%;
     padding: 50px 0;
-    color: white;
-    background: image-url("downloads-bg.jpg") no-repeat center center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    color: black;
+    h2 {
+      text-shadow: 1px 1px 0px white;
+    }
+
+    .btn-default {
+      background-color: rgba(white, 0.75);
+      color: black;
+      border: none;
+
+      &:hover {
+        border: none;
+        background-color: lighten($primary, 20%);
+        color: white;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: image-url("carcasses.jpg") no-repeat center center scroll;
+      -webkit-filter: grayscale(100%);
+      background-color: black;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
 }
 
 #map {

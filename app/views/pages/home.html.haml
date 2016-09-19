@@ -7,7 +7,7 @@
     %meta(content="width=device-width, initial-scale=1" name="viewport")/
     %meta(content="" name="description")/
     %meta(content="" name="author")/
-    %title Grayscale - Start Bootstrap Theme
+    %title Fishscale - The best fish finder around
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -26,8 +26,8 @@
             %i.fa.fa-bars
           %a.navbar-brand.page-scroll(href="#page-top")
             %i.fa.fa-play-circle
-            %span.light Start
-            Bootstrap
+            %span.light Fish
+            Scale
         / Collect the nav links, forms, and other content for toggling
         .collapse.navbar-collapse.navbar-right.navbar-main-collapse
           %ul.nav.navbar-nav
@@ -48,45 +48,34 @@
         .container
           .row
             .col-md-8.col-md-offset-2
-              %h1.brand-heading Grayscale
+              %h1.brand-heading Fishscale
               %p.intro-text
-                A free, responsive, one page Bootstrap theme.
-                = succeed "Created" do
-                  %br/
+                When you really crave salmon
               %a.btn.btn-circle.page-scroll(href="#about")
-                %i.fa.fa-angle-double-down.animated
+                %i.fa.fa-ship.animated
     / About Section
     %section#about.container.content-section.text-center
       .row
         .col-lg-8.col-lg-offset-2
-          %h2 About Grayscale
+          %h2 About Fishscale
           %p
-            Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            = succeed "." do
-              %a(href="http://startbootstrap.com/template-overviews/grayscale/") the preview page
-          %p
-            This theme features stock photos by
-            %a(href="http://gratisography.com/") Gratisography
-            along with a custom Google Maps skin courtesy of
-            = succeed "." do
-              %a(href="http://snazzymaps.com/") Snazzy Maps
-          %p Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.
+            Fishcale is the easiest way to satisfy your pescine cravings!
     / Download Section
     %section#download.content-section.text-center
       .download-section
         .container
           .col-lg-8.col-lg-offset-2
-            %h2 Download Grayscale
-            %p You can download Grayscale for free on the preview page at Start Bootstrap.
-            %a.btn.btn-default.btn-lg(href="http://startbootstrap.com/template-overviews/grayscale/") Visit Download Page
+            %h2 Start Enjoying Fish Today!
+            = link_to "/signup", class:"btn btn-default btn-lg" do
+              Sign up!
     / Contact Section
     %section#contact.container.content-section.text-center
       .row
         .col-lg-8.col-lg-offset-2
-          %h2 Contact Start Bootstrap
-          %p Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!
+          %h2 Contact Fishscale
+          %p Feel free to email us to provide some feedback on our fish!
           %p
-            %a(href="mailto:feedback@startbootstrap.com") feedback@startbootstrap.com
+            %a(href="mailto:marlin@fishscale.com") feedback@startbootstrap.com
           %ul.list-inline.banner-social-buttons
             %li
               %a.btn.btn-default.btn-lg(href="https://twitter.com/SBootstrap")
@@ -100,8 +89,6 @@
               %a.btn.btn-default.btn-lg(href="https://plus.google.com/+Startbootstrap/posts")
                 %i.fa.fa-google-plus.fa-fw
                 %span.network-name Google+
-    / Map Section
-    #map
     / Footer
     %footer
       .container.text-center
